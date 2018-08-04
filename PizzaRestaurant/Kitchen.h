@@ -8,8 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "Pizza.h"
+
+@class Kitchen;
+@protocol KitchenDelegate <NSObject>
+
+-(BOOL)kitchen:(Kitchen*)kitchen shouldMakePizzaOfSize:(NSInteger) size andToppings: (NSArray*)toppings;
+-(BOOL)kitchenShouldUpgradeOrder: (Kitchen *) kitchen;
+@optional
+-(void)kitchenDidMakePizza: (Pizza *)pizza;
+
+
+@end
+
 @interface Kitchen : NSObject
+@property (nonatomic, strong) id <KitchenDelegate> delegate;
 
 -(Pizza *)makePizzaWithSize:(NSInteger)size toppings:(NSArray *)toppings;
-
+-(void)orderIsReady: (Pizza *) newPizza;
 @end

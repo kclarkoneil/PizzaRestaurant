@@ -9,15 +9,31 @@
 #import <Foundation/Foundation.h>
 #import "Pizza.h"
 #import "Kitchen.h"
+#import "GoodManager.h"
+#import "BadManager.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
+        
+        Kitchen *steveAndDavesPizza = [Kitchen new];
+        
+        //create managers and choose between them
+        GoodManager *dave = [[GoodManager alloc] init];
+        BadManager *steve = [[BadManager alloc] init];
+        int fate = arc4random_uniform(2);
+        if (fate == 0)
+            steveAndDavesPizza.delegate = dave;
+        else
+            steveAndDavesPizza.delegate = steve;
+            
+            
+            
         NSLog(@"Please pick your pizza size and toppings:");
         
-        Kitchen *restaurantKitchen = [Kitchen new];
+       
         
         while (TRUE) {
             // Loop forever
@@ -51,11 +67,14 @@ int main(int argc, const char * argv[])
             NSMutableArray *toppings = [[NSMutableArray alloc] init];
             for (int i = 1; i < commandWords.count; i++)
             {
-                [toppings addObjectsFromArray:commandWords[i]];
+                [toppings addObject:commandWords[i]];
             }
-                
+            
+        
             // And then send some message to the kitchen...
-            [restaurantKitchen makePizzaWithSize:size toppings:toppings];
+            Pizza *newPizza = [[Pizza alloc] init];
+            newPizza = [steveAndDavesPizza makePizzaWithSize:size toppings:toppings];
+            [steveAndDavesPizza orderIsReady:newPizza];
             
         }
 

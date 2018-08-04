@@ -11,6 +11,8 @@
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
 		A142F51021151E94004E63AF /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = A142F50F21151E94004E63AF /* Pizza.m */; };
+		A142F535211641B9004E63AF /* BadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A142F534211641B9004E63AF /* BadManager.m */; };
+		A142F53821164562004E63AF /* GoodManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A142F53721164562004E63AF /* GoodManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,10 @@
 		6001EC8F197B502F00F97011 /* Kitchen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kitchen.m; sourceTree = "<group>"; };
 		A142F50E21151E94004E63AF /* Pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		A142F50F21151E94004E63AF /* Pizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
+		A142F533211641B9004E63AF /* BadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadManager.h; sourceTree = "<group>"; };
+		A142F534211641B9004E63AF /* BadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadManager.m; sourceTree = "<group>"; };
+		A142F53621164562004E63AF /* GoodManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodManager.h; sourceTree = "<group>"; };
+		A142F53721164562004E63AF /* GoodManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,10 @@
 			children = (
 				6001EC83197B4EC300F97011 /* main.m */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
+				A142F533211641B9004E63AF /* BadManager.h */,
+				A142F534211641B9004E63AF /* BadManager.m */,
+				A142F53621164562004E63AF /* GoodManager.h */,
+				A142F53721164562004E63AF /* GoodManager.m */,
 				A142F50E21151E94004E63AF /* Pizza.h */,
 				A142F50F21151E94004E63AF /* Pizza.m */,
 				6001EC8F197B502F00F97011 /* Kitchen.m */,
@@ -146,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A142F51021151E94004E63AF /* Pizza.m in Sources */,
+				A142F535211641B9004E63AF /* BadManager.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
+				A142F53821164562004E63AF /* GoodManager.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
