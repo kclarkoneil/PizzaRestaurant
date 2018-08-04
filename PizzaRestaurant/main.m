@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Pizza.h"
 #import "Kitchen.h"
 
 int main(int argc, const char * argv[])
@@ -33,8 +33,30 @@ int main(int argc, const char * argv[])
             
             // Take the first word of the command as the size, and the rest as the toppings
             NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
-            
+            NSString *pizzaSize = commandWords[0];
+            NSInteger size;
+            if ([pizzaSize isEqualToString:@"Large"])
+            {
+                size = 0;
+            }
+            else if ([pizzaSize isEqualToString:@"Medium"])
+            {
+                size = 1;
+            }
+            else if ([pizzaSize isEqualToString:@"Small"])
+            {
+                size = 2;
+            }
+            else break;
+            NSMutableArray *toppings = [[NSMutableArray alloc] init];
+            for (int i = 1; i < commandWords.count; i++)
+            {
+                [toppings addObjectsFromArray:commandWords[i]];
+            }
+                
             // And then send some message to the kitchen...
+            [restaurantKitchen makePizzaWithSize:size toppings:toppings];
+            
         }
 
     }

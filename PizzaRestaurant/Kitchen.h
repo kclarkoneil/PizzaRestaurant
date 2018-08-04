@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Pizza.h"
 @interface Kitchen : NSObject
 
-//- (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
+-(Pizza *)makePizzaWithSize:(NSInteger)size toppings:(NSArray *)toppings;
 
 @end
