@@ -10,11 +10,17 @@
 #import "Kitchen.h"
 #import "Pizza.h"
 
+
+
 @interface GoodManager : NSObject <KitchenDelegate>
 
--(BOOL)kitchen:(Kitchen*)kitchen shouldMakePizzaOfSize:(NSInteger) size andToppings: (NSArray*)toppings;
--(BOOL)kitchenShouldUpgradeOrder: (Kitchen *) kitchen;
--(void)kitchenDidMakePizza: (Pizza *)pizza;
+
+//-(BOOL)kitchen:(Kitchen*)kitchen shouldMakePizzaOfSize:(NSInteger) size andToppings: (NSArray*)toppings;
+//-(BOOL)kitchenShouldUpgradeOrder: (Kitchen *) kitchen;
+//-(void)kitchenDidMakePizza: (Pizza *)pizza;
+
+
+
 
 
 @end

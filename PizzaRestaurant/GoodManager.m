@@ -7,7 +7,7 @@
 //
 
 #import "GoodManager.h"
-
+#import "DeliveryService.h"
 @implementation GoodManager
 
 -(BOOL)kitchen:(Kitchen*)kitchen shouldMakePizzaOfSize:(NSInteger) size andToppings: (NSArray*)toppings{
@@ -20,6 +20,11 @@
 
 -(void)kitchenDidMakePizza: (Pizza *)pizza {
     
-    NSLog(@"Enjoy your number %lu %@ and have a nice day!", (long)pizza.size, pizza.toppings);
+    NSLog(@"Your %lu %@ is on its way", (long)pizza.size, pizza.toppings);
+    
 }
+-(void)initiatePizzaDelivery: (Pizza*)pizza withService:(DeliveryService*) skipTheDishes {
+    [skipTheDishes deliverPizza:pizza];
+}
+
 @end

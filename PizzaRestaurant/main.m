@@ -23,12 +23,14 @@ int main(int argc, const char * argv[])
         //create managers and choose between them
         GoodManager *dave = [[GoodManager alloc] init];
         BadManager *steve = [[BadManager alloc] init];
-        int fate = arc4random_uniform(2);
+        int fate = 0; //arc4random_uniform(2); 
         if (fate == 0)
             steveAndDavesPizza.delegate = dave;
         else
             steveAndDavesPizza.delegate = steve;
-            
+        DeliveryService *doorDash = [[DeliveryService alloc] init];
+
+ 
             
             
         NSLog(@"Please pick your pizza size and toppings:");
@@ -74,7 +76,8 @@ int main(int argc, const char * argv[])
             // And then send some message to the kitchen...
             Pizza *newPizza = [[Pizza alloc] init];
             newPizza = [steveAndDavesPizza makePizzaWithSize:size toppings:toppings];
-            [steveAndDavesPizza orderIsReady:newPizza];
+            [steveAndDavesPizza.delegate initiatePizzaDelivery:newPizza withService:doorDash];
+            
             
         }
 

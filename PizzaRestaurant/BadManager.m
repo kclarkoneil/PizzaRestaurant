@@ -23,6 +23,9 @@
     
        return YES;
     }
+-(void)initiatePizzaDelivery:(Pizza *)pizza withService:(DeliveryService *)skipTheDishes {
+    [skipTheDishes deliverPizza:pizza];
+}
     
 
 
